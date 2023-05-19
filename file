@@ -1,0 +1,12 @@
+$filename = "data.csv";
+$file = fopen($filename, "r");
+
+while (($data = fgetcsv($file)) !== false) {
+    foreach ($data as $value) {
+        echo $value . " ";
+    }
+    echo "<br>";
+}
+
+fclose($file);
+
